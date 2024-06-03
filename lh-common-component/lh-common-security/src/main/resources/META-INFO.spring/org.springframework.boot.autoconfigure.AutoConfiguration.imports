@@ -1,0 +1,2 @@
+org.lh.shop.common.security.handler.GlobalExceptionHandler
+org.lh.shop.common.security.config.SecurityConfiguration

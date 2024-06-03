@@ -1,0 +1,5 @@
+org.lh.shop.common.core.utils.SpringUtils
+org.lh.shop.common.core.config.ApplicationConfig
+org.lh.shop.common.core.config.JacksonConfig
+org.lh.shop.common.core.config.ValidatorConfig
+org.lh.shop.common.core.config.AsyncConfig
