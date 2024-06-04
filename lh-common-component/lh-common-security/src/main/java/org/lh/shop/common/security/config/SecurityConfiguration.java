@@ -22,14 +22,14 @@ import javax.annotation.Resource;
 public class SecurityConfiguration implements WebMvcConfigurer {
 
     @Resource
-    private IgnoreUrlsConfig ignoreUrlsConfig;
+    private IgnoreWhiteProperties ignoreWhiteProperties;
     /**
      * 注册sa-token的拦截器
      */
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         // 注册路由拦截器，自定义验证规则
-        registry.addInterceptor(new SaInterceptor()).addPathPatterns("/**").excludePathPatterns(ignoreUrlsConfig.getUrls());
+        registry.addInterceptor(new SaInterceptor()).addPathPatterns("/**").excludePathPatterns(ignoreWhiteProperties.getWhites());
     }
 
     /**
@@ -38,8 +38,8 @@ public class SecurityConfiguration implements WebMvcConfigurer {
     @Bean
     public SaServletFilter getSaServletFilter() {
         return new SaServletFilter()
-//            .addInclude("/**")
-//            .addExclude("/actuator/**")
+            .addInclude("/**")
+            .addExclude("/actuator/**")
             .setAuth(obj -> {
                 if (SaManager.getConfig().getCheckSameToken()) {
                     SaSameUtil.checkCurrentRequestToken();

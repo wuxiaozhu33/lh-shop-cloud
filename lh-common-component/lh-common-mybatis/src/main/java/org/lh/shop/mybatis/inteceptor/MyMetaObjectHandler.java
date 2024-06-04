@@ -2,8 +2,9 @@ package org.lh.shop.mybatis.inteceptor;
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 import org.apache.ibatis.reflection.MetaObject;
-import org.lh.shop.auth.model.LoginUser;
-import org.lh.shop.auth.utils.AuthUtil;
+import org.lh.shop.common.satoken.utils.AuthUtil;
+import org.lh.shop.common.satoken.utils.LoginHelper;
+import org.lh.shop.system.api.model.LoginUser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,7 +20,7 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
 
     @Override
     public void insertFill(MetaObject metaObject) {
-        LoginUser user = Optional.<LoginUser>ofNullable(getLoginUser()).orElse(LoginUser.getNullDefaultUser());
+        LoginUser user = Optional.ofNullable(getLoginUser()).orElse(LoginUser.getNullDefaultUser());
         if (metaObject.hasGetter("createBy")) {
             strictInsertFill(metaObject, "createBy", Long.class, user.getUserId());
         }
@@ -50,7 +51,7 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
 
     private LoginUser getLoginUser() {
         try {
-            return AuthUtil.getCurrentUser();
+            return LoginHelper.getLoginUser();
         } catch (Exception e) {
             return null;
         }
@@ -58,7 +59,7 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
 
     private Long getLoginUserId() {
         try {
-            return AuthUtil.getUserId();
+            return LoginHelper.getUserId();
         } catch (Exception e) {
             log.error("未获取到当前登录用户id", e);
             return null;

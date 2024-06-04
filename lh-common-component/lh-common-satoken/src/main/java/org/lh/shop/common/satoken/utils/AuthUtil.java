@@ -1,8 +1,8 @@
-package org.lh.shop.auth.utils;
+package org.lh.shop.common.satoken.utils;
 
 import cn.dev33.satoken.stp.StpUtil;
-import org.lh.shop.auth.model.LoginUser;
 import org.lh.shop.common.core.exception.ServiceException;
+import org.lh.shop.system.api.model.LoginUser;
 
 import java.util.Optional;
 

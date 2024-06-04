@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.lh.shop.sys.mapper.SysMenuMapper">
+
+    <select id="selectMenuPerms" resultType="String">
+        select distinct m.perms
+        from sys_menu m
+                 left join sys_role_menu rm on m.menu_id = rm.menu_id
+                 left join sys_user_role sur on rm.role_id = sur.role_id
+    </select>
+
+    <select id="selectMenuPermsByUserId" parameterType="Long" resultType="String">
+        select distinct m.perms
+        from sys_menu m
+                 left join sys_role_menu rm on m.menu_id = rm.menu_id
+                 left join sys_user_role sur on rm.role_id = sur.role_id
+                 left join sys_role r on r.role_id = sur.role_id
+        where m.status = '0' and r.status = '0' and sur.user_id = #{userId}
+    </select>
+
+    <select id="selectMenuPermsByRoleId" parameterType="Long" resultType="String">
+        select distinct m.perms
+        from sys_menu m
+                 left join sys_role_menu rm on m.menu_id = rm.menu_id
+        where m.status = '0' and rm.role_id = #{roleId}
+    </select>
+</mapper>

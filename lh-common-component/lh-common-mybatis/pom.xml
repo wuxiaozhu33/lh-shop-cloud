@@ -14,13 +14,20 @@
     <dependencies>
         <dependency>
             <groupId>org.lh.shop</groupId>
-            <artifactId>lh-shop-auth</artifactId>
+            <artifactId>lh-common-satoken</artifactId>
         </dependency>
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity-engine-core</artifactId>
+        </dependency>
         <!-- sql性能分析插件 -->
         <dependency>
             <groupId>p6spy</groupId>

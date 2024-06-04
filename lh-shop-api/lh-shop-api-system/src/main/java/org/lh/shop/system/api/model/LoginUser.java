@@ -117,5 +117,11 @@ public class LoginUser implements Serializable {
         }
         return userType + CacheConstants.LOGINID_JOIN_CODE + userId;
     }
-
+    public static LoginUser getNullDefaultUser() {
+        LoginUser user = new LoginUser();
+        user.setUserId(-1L);
+        user.setUsername("");
+        user.setDeptId(-1L);
+        return user;
+    }
 }

@@ -19,6 +19,11 @@
             </dependency>
             <dependency>
                 <groupId>org.lh.shop</groupId>
+                <artifactId>lh-common-mybatis</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.lh.shop</groupId>
                 <artifactId>lh-common-redis</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -29,9 +34,10 @@
             </dependency>
             <dependency>
                 <groupId>org.lh.shop</groupId>
-                <artifactId>lh-shop-auth</artifactId>
+                <artifactId>lh-common-security</artifactId>
                 <version>${project.version}</version>
             </dependency>
+
         </dependencies>
     </dependencyManagement>
 
