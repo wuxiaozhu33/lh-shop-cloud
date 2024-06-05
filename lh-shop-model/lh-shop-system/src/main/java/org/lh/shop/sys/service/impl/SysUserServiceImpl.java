@@ -5,16 +5,17 @@ import cn.hutool.core.util.ObjectUtil;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.lh.shop.common.core.enums.UserStatus;
 import org.lh.shop.common.core.exception.user.UserException;
 import org.lh.shop.common.core.utils.StringUtils;
 import org.lh.shop.mybatis.page.PageQuery;
+import org.lh.shop.sys.cache.SysCache;
 import org.lh.shop.sys.dto.SysUserDto;
 import org.lh.shop.sys.mapper.SysUserMapper;
 import org.lh.shop.sys.service.IPermissionService;
 import org.lh.shop.sys.service.ISysUserService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.lh.shop.system.api.domain.SysRole;
 import org.lh.shop.system.api.domain.SysUser;
 import org.lh.shop.system.api.model.LoginUser;
 import org.lh.shop.system.api.model.RoleDTO;
@@ -52,13 +53,15 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
     @Override
     public LoginUser getUserInfo(String username) {
         SysUser sysUser = this.getOne(Wrappers.<SysUser>lambdaQuery().eq(SysUser::getUserName, username));
-
         if (ObjectUtil.isNull(sysUser)) {
             throw new UserException("user.not.exists", username);
         }
         if (UserStatus.DISABLE.getCode().equals(sysUser.getStatus())) {
             throw new UserException("user.blocked", username);
         }
+        List<SysRole> userOfRoles = SysCache.getRolesByUserId(sysUser.getUserId());
+        sysUser.setRoles(userOfRoles);
+        sysUser.setDept(SysCache.getDept(sysUser.getDeptId()));
         return buildLoginUser(sysUser);
     }
 

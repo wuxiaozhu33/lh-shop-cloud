@@ -1,1 +1,1 @@
-com.ruoyi.common.redis.config.RedisConfiguration
+org.lh.shop.common.redis.config.RedisConfiguration

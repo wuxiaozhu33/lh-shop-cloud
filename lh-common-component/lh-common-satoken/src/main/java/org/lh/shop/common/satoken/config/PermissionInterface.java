@@ -1,31 +1,41 @@
 package org.lh.shop.common.satoken.config;
 
 import cn.dev33.satoken.stp.StpInterface;
-import org.springframework.stereotype.Component;
+import org.lh.shop.common.core.enums.UserType;
+import org.lh.shop.common.satoken.utils.LoginHelper;
+import org.lh.shop.system.api.model.LoginUser;
 
-import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * @author wuYf
  * @date 2024/6/3 11:20
  */
-@Component
 public class PermissionInterface  implements StpInterface {
+
 
     @Override
     public List<String> getPermissionList(Object loginId, String loginType) {
-//        List<SysMenu> menuList = this.menuService.selectPermsByRoleId(AuthUtil.getUserRoleId());
-//        return (List<String>)menuList.stream().map(SysMenu::getPerms).collect(Collectors.toList());
+        LoginUser loginUser = LoginHelper.getLoginUser();
+        UserType userType = UserType.getUserType(loginUser.getUserType());
+        if (userType == UserType.SYS_USER) {
+            return new ArrayList<>(loginUser.getMenuPermission());
+        } else if (userType == UserType.APP_USER) {
+            // 其他端 自行根据业务编写
+        }
         return new ArrayList<>();
     }
 
     @Override
     public List<String> getRoleList(Object loginId, String loginType) {
-//        String roleCodes = AuthUtil.getUserRoleCode();
-//        return ComUtil.toStrList(roleCodes);
+        LoginUser loginUser = LoginHelper.getLoginUser();
+        UserType userType = UserType.getUserType(loginUser.getUserType());
+        if (userType == UserType.SYS_USER) {
+            return new ArrayList<>(loginUser.getRolePermission());
+        } else if (userType == UserType.APP_USER) {
+            // 其他端 自行根据业务编写
+        }
         return new ArrayList<>();
     }
 }

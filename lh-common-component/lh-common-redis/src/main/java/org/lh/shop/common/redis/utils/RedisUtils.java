@@ -2,6 +2,7 @@ package org.lh.shop.common.redis.utils;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.lh.shop.common.core.utils.SpringUtils;
 import org.redisson.api.*;
 
@@ -11,6 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.function.Consumer;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -20,6 +22,7 @@ import java.util.stream.Stream;
  * @author Lion Li
  * @version 3.1.0 新增
  */
+@Slf4j
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 @SuppressWarnings(value = {"unchecked", "rawtypes"})
 public class RedisUtils {
@@ -487,5 +490,25 @@ public class RedisUtils {
         RKeys rKeys = CLIENT.getKeys();
         return rKeys.countExists(key) > 0;
     }
+
+    public static <T> T getAndPutValue(String key, Supplier<T> databaseSelector) {
+        try {
+            log.debug("query data from redis ....... ");
+            T caCherVal = RedisUtils.getCacheObject(key);
+            if (caCherVal == null) {
+                T databaseValue = databaseSelector.get();
+                if (databaseValue != null) {
+                    RedisUtils.setCacheObject(key, databaseValue);
+                }
+                return databaseValue;
+            }
+            return caCherVal;
+        } catch (Exception e) {
+            log.error("redis error", e);
+            log.debug("query data from database");
+            return databaseSelector.get();
+        }
+    }
+
 
 }

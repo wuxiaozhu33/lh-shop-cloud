@@ -1,5 +1,7 @@
 package org.lh.shop.sys.controller;
 
+import cn.dev33.satoken.annotation.SaCheckRole;
+import cn.dev33.satoken.annotation.SaMode;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import org.lh.shop.common.core.domin.R;
 import org.lh.shop.mybatis.page.PageQuery;
@@ -29,6 +31,7 @@ public class SysUserController {
         return R.ok(sysUserService.pageUser(userDto, pageQuery));
     }
 
+    @SaCheckRole(value = {"admin", "common"}, mode= SaMode.OR)
     @GetMapping("/list")
     public R<List<SysUser>> listUser(SysUserDto userDto) {
         return R.ok(sysUserService.listUser(userDto));

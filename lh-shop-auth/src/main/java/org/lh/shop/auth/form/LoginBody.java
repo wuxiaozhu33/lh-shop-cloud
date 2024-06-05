@@ -1,9 +1,9 @@
 package org.lh.shop.auth.form;
 
-import com.ruoyi.common.core.constant.UserConstants;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Length;
+import org.lh.shop.common.core.constant.UserConstants;
 
 import javax.validation.constraints.NotBlank;
 

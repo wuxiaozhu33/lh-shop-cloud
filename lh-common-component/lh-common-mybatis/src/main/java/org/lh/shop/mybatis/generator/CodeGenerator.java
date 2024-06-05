@@ -2,7 +2,6 @@ package org.lh.shop.mybatis.generator;
 
 import com.baomidou.mybatisplus.generator.FastAutoGenerator;
 import com.baomidou.mybatisplus.generator.config.OutputFile;
-import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
 
 import java.util.Collections;
 
@@ -15,7 +14,7 @@ public class CodeGenerator {
         String url = "jdbc:mysql://121.37.24.51:3346/lh-shop?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true";
         String username = "root";
         String password = "pwd123";
-        String tableName = "sys_role";
+        String tableName = "sys_dept";
         String tablePrefix = "t_";
         String modelName = "sys";
         String entityPackageName = "domain";

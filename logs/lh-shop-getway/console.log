@@ -1,0 +1,695 @@
+2024-06-05 15:15:57 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2024-06-05 15:15:57 [main] INFO  o.l.s.gateway.LhGatewayApplication - Starting LhGatewayApplication using Java 1.8.0_211 on LHZL-LTP-01 with PID 16376 (C:\code\lh-shop-cloud\lh-shop-getway\target\classes started by user in C:\code\lh-shop-cloud)
+2024-06-05 15:15:57 [main] INFO  o.l.s.gateway.LhGatewayApplication - The following 1 profile is active: "blue-ocean-dev"
+2024-06-05 15:15:58 [main] INFO  c.a.c.n.c.NacosConfigDataLoader - [Nacos Config] Load config[dataId=blue-gateway.yml, group=DEFAULT_GROUP] success
+2024-06-05 15:15:58 [main] INFO  c.a.c.n.c.NacosConfigDataLoader - [Nacos Config] Load config[dataId=application-common.yml, group=DEFAULT_GROUP] success
+2024-06-05 15:16:03 [main] INFO  o.l.s.c.r.config.RedisConfiguration - 初始化 redis 配置
+2024-06-05 15:16:03 [main] INFO  org.redisson.Version - Redisson 3.20.1
+2024-06-05 15:16:03 [redisson-netty-3-6] INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for 139.159.157.130/139.159.157.130:63790
+2024-06-05 15:16:03 [redisson-netty-3-3] INFO  o.r.c.pool.MasterConnectionPool - 8 connections initialized for 139.159.157.130/139.159.157.130:63790
+2024-06-05 15:16:04 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cn.dev33.satoken.spring.SaBeanInject': Unsatisfied dependency expressed through method 'setSaTokenContext' parameter 0; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'cn.dev33.satoken.context.SaTokenContext' available: expected single matching bean but found 2: getSaTokenContextForSpringReactor,getSaTokenContextForSpring
+2024-06-05 15:16:04 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method setSaTokenContext in cn.dev33.satoken.spring.SaBeanInject required a single bean, but 2 were found:
+	- getSaTokenContextForSpringReactor: defined by method 'getSaTokenContextForSpringReactor' in class path resource [cn/dev33/satoken/reactor/spring/SaTokenContextRegister.class]
+	- getSaTokenContextForSpring: defined by method 'getSaTokenContextForSpring' in class path resource [cn/dev33/satoken/spring/SaTokenContextRegister.class]
+
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+
+2024-06-05 15:16:05 [Thread-6] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2024-06-05 15:16:05 [Thread-11] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2024-06-05 15:16:05 [Thread-11] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2024-06-05 15:16:05 [Thread-6] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2024-06-05 15:26:57 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2024-06-05 15:26:57 [main] INFO  o.l.s.gateway.LhGatewayApplication - Starting LhGatewayApplication using Java 1.8.0_211 on LHZL-LTP-01 with PID 12220 (C:\code\lh-shop-cloud\lh-shop-getway\target\classes started by user in C:\code\lh-shop-cloud)
+2024-06-05 15:26:57 [main] INFO  o.l.s.gateway.LhGatewayApplication - The following 1 profile is active: "blue-ocean-dev"
+2024-06-05 15:26:57 [main] INFO  c.a.c.n.c.NacosConfigDataLoader - [Nacos Config] Load config[dataId=blue-gateway.yml, group=DEFAULT_GROUP] success
+2024-06-05 15:26:57 [main] INFO  c.a.c.n.c.NacosConfigDataLoader - [Nacos Config] Load config[dataId=application-common.yml, group=DEFAULT_GROUP] success
+2024-06-05 15:26:59 [main] INFO  o.l.s.c.r.config.RedisConfiguration - 初始化 redis 配置
+2024-06-05 15:26:59 [main] INFO  org.redisson.Version - Redisson 3.20.1
+2024-06-05 15:26:59 [redisson-netty-3-1] INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for 139.159.157.130/139.159.157.130:63790
+2024-06-05 15:26:59 [redisson-netty-3-3] INFO  o.r.c.pool.MasterConnectionPool - 8 connections initialized for 139.159.157.130/139.159.157.130:63790
+2024-06-05 15:27:01 [main] INFO  c.a.c.n.r.NacosServiceRegistry - nacos registry, DEFAULT_GROUP blue-gateway 192.168.111.184:8080 register finished
+2024-06-05 15:27:01 [main] INFO  c.a.c.n.d.GatewayLocatorHeartBeatPublisher - Start nacos gateway locator heartBeat task scheduler.
+2024-06-05 15:27:01 [main] INFO  o.l.s.gateway.LhGatewayApplication - Started LhGatewayApplication in 5.825 seconds (JVM running for 6.626)
+2024-06-05 15:27:01 [main] INFO  c.a.c.n.r.NacosContextRefresher - [Nacos Config] Listening config: dataId=application-common.yml, group=DEFAULT_GROUP
+2024-06-05 15:27:01 [main] INFO  c.a.c.n.r.NacosContextRefresher - [Nacos Config] Listening config: dataId=blue-gateway.yml, group=DEFAULT_GROUP
+2024-06-05 15:27:13 [Thread-11] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2024-06-05 15:27:13 [Thread-11] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2024-06-05 15:27:13 [Thread-6] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2024-06-05 15:27:13 [Thread-6] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2024-06-05 15:27:13 [SpringApplicationShutdownHook] INFO  c.a.c.n.r.NacosServiceRegistry - De-registering from Nacos Server now...
+2024-06-05 15:27:13 [SpringApplicationShutdownHook] INFO  c.a.c.n.r.NacosServiceRegistry - De-registration finished.
+2024-06-05 16:25:10 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2024-06-05 16:25:10 [main] INFO  o.l.s.gateway.LhGatewayApplication - Starting LhGatewayApplication using Java 1.8.0_211 on LHZL-LTP-01 with PID 28236 (C:\code\lh-shop-cloud\lh-shop-getway\target\classes started by user in C:\code\lh-shop-cloud)
+2024-06-05 16:25:10 [main] INFO  o.l.s.gateway.LhGatewayApplication - The following 1 profile is active: "dev"
+2024-06-05 16:25:10 [main] INFO  c.a.c.n.c.NacosConfigDataLoader - [Nacos Config] Load config[dataId=blue-gateway.yml, group=DEFAULT_GROUP] success
+2024-06-05 16:25:10 [main] INFO  c.a.c.n.c.NacosConfigDataLoader - [Nacos Config] Load config[dataId=application-common.yml, group=DEFAULT_GROUP] success
+2024-06-05 16:25:12 [main] INFO  o.l.s.c.r.config.RedisConfiguration - 初始化 redis 配置
+2024-06-05 16:25:12 [main] INFO  org.redisson.Version - Redisson 3.20.1
+2024-06-05 16:25:12 [redisson-netty-3-6] INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for 139.159.157.130/139.159.157.130:63790
+2024-06-05 16:25:12 [redisson-netty-3-3] INFO  o.r.c.pool.MasterConnectionPool - 8 connections initialized for 139.159.157.130/139.159.157.130:63790
+2024-06-05 16:25:14 [main] INFO  c.a.c.n.r.NacosServiceRegistry - nacos registry, DEFAULT_GROUP blue-gateway 192.168.111.184:8080 register finished
+2024-06-05 16:25:14 [main] INFO  c.a.c.n.d.GatewayLocatorHeartBeatPublisher - Start nacos gateway locator heartBeat task scheduler.
+2024-06-05 16:25:14 [main] INFO  o.l.s.gateway.LhGatewayApplication - Started LhGatewayApplication in 5.852 seconds (JVM running for 6.71)
+2024-06-05 16:25:14 [main] INFO  c.a.c.n.r.NacosContextRefresher - [Nacos Config] Listening config: dataId=application-common.yml, group=DEFAULT_GROUP
+2024-06-05 16:25:14 [main] INFO  c.a.c.n.r.NacosContextRefresher - [Nacos Config] Listening config: dataId=blue-gateway.yml, group=DEFAULT_GROUP
+2024-06-05 16:26:43 [Thread-10] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2024-06-05 16:26:43 [Thread-10] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2024-06-05 16:26:43 [Thread-5] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2024-06-05 16:26:43 [Thread-5] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2024-06-05 16:26:43 [SpringApplicationShutdownHook] INFO  c.a.c.n.r.NacosServiceRegistry - De-registering from Nacos Server now...
+2024-06-05 16:26:43 [SpringApplicationShutdownHook] INFO  c.a.c.n.r.NacosServiceRegistry - De-registration finished.
+2024-06-05 16:59:50 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2024-06-05 16:59:50 [main] INFO  o.l.s.gateway.LhGatewayApplication - Starting LhGatewayApplication using Java 1.8.0_211 on LHZL-LTP-01 with PID 1980 (C:\code\lh-shop-cloud\lh-shop-getway\target\classes started by user in C:\code\lh-shop-cloud)
+2024-06-05 16:59:50 [main] INFO  o.l.s.gateway.LhGatewayApplication - The following 1 profile is active: "dev"
+2024-06-05 16:59:50 [main] INFO  c.a.c.n.c.NacosConfigDataLoader - [Nacos Config] Load config[dataId=blue-gateway.yml, group=DEFAULT_GROUP] success
+2024-06-05 16:59:50 [main] INFO  c.a.c.n.c.NacosConfigDataLoader - [Nacos Config] Load config[dataId=application-common.yml, group=DEFAULT_GROUP] success
+2024-06-05 16:59:52 [main] INFO  o.l.s.c.r.config.RedisConfiguration - 初始化 redis 配置
+2024-06-05 16:59:52 [main] INFO  org.redisson.Version - Redisson 3.20.1
+2024-06-05 16:59:52 [redisson-netty-3-6] INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for 139.159.157.130/139.159.157.130:63790
+2024-06-05 16:59:52 [redisson-netty-3-3] INFO  o.r.c.pool.MasterConnectionPool - 8 connections initialized for 139.159.157.130/139.159.157.130:63790
+2024-06-05 16:59:54 [main] INFO  c.a.c.n.r.NacosServiceRegistry - nacos registry, DEFAULT_GROUP blue-gateway 192.168.111.184:8080 register finished
+2024-06-05 16:59:54 [main] INFO  c.a.c.n.d.GatewayLocatorHeartBeatPublisher - Start nacos gateway locator heartBeat task scheduler.
+2024-06-05 16:59:54 [main] INFO  o.l.s.gateway.LhGatewayApplication - Started LhGatewayApplication in 6.035 seconds (JVM running for 6.878)
+2024-06-05 16:59:54 [main] INFO  c.a.c.n.r.NacosContextRefresher - [Nacos Config] Listening config: dataId=application-common.yml, group=DEFAULT_GROUP
+2024-06-05 16:59:54 [main] INFO  c.a.c.n.r.NacosContextRefresher - [Nacos Config] Listening config: dataId=blue-gateway.yml, group=DEFAULT_GROUP
+2024-06-05 17:02:45 [Thread-11] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2024-06-05 17:02:45 [Thread-11] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2024-06-05 17:02:45 [Thread-5] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2024-06-05 17:02:45 [Thread-5] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2024-06-05 17:02:45 [SpringApplicationShutdownHook] INFO  c.a.c.n.r.NacosServiceRegistry - De-registering from Nacos Server now...
+2024-06-05 17:02:45 [SpringApplicationShutdownHook] INFO  c.a.c.n.r.NacosServiceRegistry - De-registration finished.
+2024-06-05 17:05:57 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2024-06-05 17:05:57 [main] INFO  o.l.s.gateway.LhGatewayApplication - Starting LhGatewayApplication using Java 1.8.0_211 on LHZL-LTP-01 with PID 2740 (C:\code\lh-shop-cloud\lh-shop-getway\target\classes started by user in C:\code\lh-shop-cloud)
+2024-06-05 17:05:57 [main] INFO  o.l.s.gateway.LhGatewayApplication - The following 1 profile is active: "dev"
+2024-06-05 17:05:57 [main] INFO  c.a.c.n.c.NacosConfigDataLoader - [Nacos Config] Load config[dataId=blue-gateway.yml, group=DEFAULT_GROUP] success
+2024-06-05 17:05:57 [main] INFO  c.a.c.n.c.NacosConfigDataLoader - [Nacos Config] Load config[dataId=application-common.yml, group=DEFAULT_GROUP] success
+2024-06-05 17:05:59 [main] INFO  o.l.s.c.r.config.RedisConfiguration - 初始化 redis 配置
+2024-06-05 17:05:59 [main] INFO  org.redisson.Version - Redisson 3.20.1
+2024-06-05 17:05:59 [redisson-netty-3-6] INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for 139.159.157.130/139.159.157.130:63790
+2024-06-05 17:05:59 [redisson-netty-3-3] INFO  o.r.c.pool.MasterConnectionPool - 8 connections initialized for 139.159.157.130/139.159.157.130:63790
+2024-06-05 17:06:01 [main] INFO  c.a.c.n.r.NacosServiceRegistry - nacos registry, DEFAULT_GROUP blue-gateway 192.168.111.184:8080 register finished
+2024-06-05 17:06:01 [main] INFO  c.a.c.n.d.GatewayLocatorHeartBeatPublisher - Start nacos gateway locator heartBeat task scheduler.
+2024-06-05 17:06:01 [main] INFO  o.l.s.gateway.LhGatewayApplication - Started LhGatewayApplication in 6.292 seconds (JVM running for 7.132)
+2024-06-05 17:06:01 [main] INFO  c.a.c.n.r.NacosContextRefresher - [Nacos Config] Listening config: dataId=application-common.yml, group=DEFAULT_GROUP
+2024-06-05 17:06:01 [main] INFO  c.a.c.n.r.NacosContextRefresher - [Nacos Config] Listening config: dataId=blue-gateway.yml, group=DEFAULT_GROUP
+2024-06-05 17:07:16 [Thread-5] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2024-06-05 17:07:16 [Thread-11] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2024-06-05 17:07:16 [Thread-11] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2024-06-05 17:07:16 [Thread-5] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2024-06-05 17:07:16 [SpringApplicationShutdownHook] INFO  c.a.c.n.r.NacosServiceRegistry - De-registering from Nacos Server now...
+2024-06-05 17:07:16 [SpringApplicationShutdownHook] INFO  c.a.c.n.r.NacosServiceRegistry - De-registration finished.
+2024-06-05 17:07:23 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2024-06-05 17:07:23 [main] INFO  o.l.s.gateway.LhGatewayApplication - Starting LhGatewayApplication using Java 1.8.0_211 on LHZL-LTP-01 with PID 6224 (C:\code\lh-shop-cloud\lh-shop-getway\target\classes started by user in C:\code\lh-shop-cloud)
+2024-06-05 17:07:23 [main] INFO  o.l.s.gateway.LhGatewayApplication - The following 1 profile is active: "dev"
+2024-06-05 17:07:23 [main] INFO  c.a.c.n.c.NacosConfigDataLoader - [Nacos Config] Load config[dataId=lh-shop-gateway.yml, group=DEFAULT_GROUP] success
+2024-06-05 17:07:23 [main] INFO  c.a.c.n.c.NacosConfigDataLoader - [Nacos Config] Load config[dataId=application-common.yml, group=DEFAULT_GROUP] success
+2024-06-05 17:07:25 [main] INFO  o.l.s.c.r.config.RedisConfiguration - 初始化 redis 配置
+2024-06-05 17:07:25 [main] INFO  org.redisson.Version - Redisson 3.20.1
+2024-06-05 17:07:26 [redisson-netty-3-6] INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for 121.37.24.51/121.37.24.51:63791
+2024-06-05 17:07:26 [redisson-netty-3-3] INFO  o.r.c.pool.MasterConnectionPool - 8 connections initialized for 121.37.24.51/121.37.24.51:63791
+2024-06-05 17:07:27 [main] INFO  c.a.c.n.r.NacosServiceRegistry - nacos registry, DEFAULT_GROUP lh-shop-gateway 192.168.111.184:8080 register finished
+2024-06-05 17:07:27 [main] INFO  c.a.c.n.d.GatewayLocatorHeartBeatPublisher - Start nacos gateway locator heartBeat task scheduler.
+2024-06-05 17:07:27 [main] INFO  o.l.s.gateway.LhGatewayApplication - Started LhGatewayApplication in 5.879 seconds (JVM running for 6.658)
+2024-06-05 17:07:27 [main] INFO  c.a.c.n.r.NacosContextRefresher - [Nacos Config] Listening config: dataId=application-common.yml, group=DEFAULT_GROUP
+2024-06-05 17:07:27 [main] INFO  c.a.c.n.r.NacosContextRefresher - [Nacos Config] Listening config: dataId=lh-shop-gateway.yml, group=DEFAULT_GROUP
+2024-06-05 17:50:56 [Thread-11] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2024-06-05 17:50:56 [Thread-5] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2024-06-05 17:50:56 [Thread-11] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2024-06-05 17:50:56 [Thread-5] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2024-06-05 17:50:56 [SpringApplicationShutdownHook] INFO  c.a.c.n.r.NacosServiceRegistry - De-registering from Nacos Server now...
+2024-06-05 17:50:56 [SpringApplicationShutdownHook] INFO  c.a.c.n.r.NacosServiceRegistry - De-registration finished.
+2024-06-05 17:51:09 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2024-06-05 17:51:09 [main] INFO  o.l.s.gateway.LhGatewayApplication - Starting LhGatewayApplication using Java 1.8.0_211 on LHZL-LTP-01 with PID 25916 (C:\code\lh-shop-cloud\lh-shop-getway\target\classes started by user in C:\code\lh-shop-cloud)
+2024-06-05 17:51:09 [main] INFO  o.l.s.gateway.LhGatewayApplication - The following 1 profile is active: "dev"
+2024-06-05 17:51:09 [main] INFO  c.a.c.n.c.NacosConfigDataLoader - [Nacos Config] Load config[dataId=lh-shop-gateway.yml, group=DEFAULT_GROUP] success
+2024-06-05 17:51:09 [main] INFO  c.a.c.n.c.NacosConfigDataLoader - [Nacos Config] Load config[dataId=application-common.yml, group=DEFAULT_GROUP] success
+2024-06-05 17:51:09 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.lh.shop.gateway.LhGatewayApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class] cannot be opened because it does not exist
+2024-06-05 17:51:09 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.lh.shop.gateway.LhGatewayApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class] cannot be opened because it does not exist
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:612)
+	at org.springframework.context.annotation.ConfigurationClassParser.access$800(ConfigurationClassParser.java:110)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:815)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:812)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:783)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:192)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:756)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:572)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at org.lh.shop.gateway.LhGatewayApplication.main(LhGatewayApplication.java:14)
+Caused by: java.io.FileNotFoundException: class path resource [org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:203)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:55)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:699)
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1027)
+	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:385)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:331)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249)
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:602)
+	... 19 common frames omitted
+2024-06-05 17:51:09 [Thread-11] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2024-06-05 17:51:09 [Thread-5] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2024-06-05 17:51:09 [Thread-11] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2024-06-05 17:51:09 [Thread-5] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2024-06-05 17:51:47 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2024-06-05 17:51:47 [main] INFO  o.l.s.gateway.LhGatewayApplication - Starting LhGatewayApplication using Java 1.8.0_211 on LHZL-LTP-01 with PID 13676 (C:\code\lh-shop-cloud\lh-shop-getway\target\classes started by user in C:\code\lh-shop-cloud)
+2024-06-05 17:51:47 [main] INFO  o.l.s.gateway.LhGatewayApplication - The following 1 profile is active: "dev"
+2024-06-05 17:51:47 [main] INFO  c.a.c.n.c.NacosConfigDataLoader - [Nacos Config] Load config[dataId=lh-shop-gateway.yml, group=DEFAULT_GROUP] success
+2024-06-05 17:51:47 [main] INFO  c.a.c.n.c.NacosConfigDataLoader - [Nacos Config] Load config[dataId=application-common.yml, group=DEFAULT_GROUP] success
+2024-06-05 17:51:48 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.lh.shop.gateway.LhGatewayApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class] cannot be opened because it does not exist
+2024-06-05 17:51:48 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.lh.shop.gateway.LhGatewayApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class] cannot be opened because it does not exist
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:612)
+	at org.springframework.context.annotation.ConfigurationClassParser.access$800(ConfigurationClassParser.java:110)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:815)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:812)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:783)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:192)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:756)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:572)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at org.lh.shop.gateway.LhGatewayApplication.main(LhGatewayApplication.java:14)
+Caused by: java.io.FileNotFoundException: class path resource [org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:203)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:55)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:699)
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1027)
+	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:385)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:331)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249)
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:602)
+	... 19 common frames omitted
+2024-06-05 17:51:48 [Thread-11] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2024-06-05 17:51:48 [Thread-11] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2024-06-05 17:51:48 [Thread-5] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2024-06-05 17:51:48 [Thread-5] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2024-06-05 18:00:20 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2024-06-05 18:00:20 [main] INFO  o.l.s.gateway.LhGatewayApplication - Starting LhGatewayApplication using Java 1.8.0_211 on LHZL-LTP-01 with PID 21860 (C:\code\lh-shop-cloud\lh-shop-getway\target\classes started by user in C:\code\lh-shop-cloud)
+2024-06-05 18:00:20 [main] INFO  o.l.s.gateway.LhGatewayApplication - The following 1 profile is active: "dev"
+2024-06-05 18:00:20 [main] INFO  c.a.c.n.c.NacosConfigDataLoader - [Nacos Config] Load config[dataId=lh-shop-gateway.yml, group=DEFAULT_GROUP] success
+2024-06-05 18:00:20 [main] INFO  c.a.c.n.c.NacosConfigDataLoader - [Nacos Config] Load config[dataId=application-common.yml, group=DEFAULT_GROUP] success
+2024-06-05 18:00:20 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.lh.shop.gateway.LhGatewayApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class] cannot be opened because it does not exist
+2024-06-05 18:00:20 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.lh.shop.gateway.LhGatewayApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class] cannot be opened because it does not exist
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:612)
+	at org.springframework.context.annotation.ConfigurationClassParser.access$800(ConfigurationClassParser.java:110)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:815)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:812)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:783)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:192)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:756)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:572)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at org.lh.shop.gateway.LhGatewayApplication.main(LhGatewayApplication.java:14)
+Caused by: java.io.FileNotFoundException: class path resource [org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:203)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:55)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:699)
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1027)
+	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:385)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:331)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249)
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:602)
+	... 19 common frames omitted
+2024-06-05 18:00:20 [Thread-5] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2024-06-05 18:00:20 [Thread-11] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2024-06-05 18:00:20 [Thread-11] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2024-06-05 18:00:20 [Thread-5] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2024-06-05 18:02:05 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2024-06-05 18:02:05 [main] INFO  o.l.s.gateway.LhGatewayApplication - Starting LhGatewayApplication using Java 1.8.0_211 on LHZL-LTP-01 with PID 26408 (C:\code\lh-shop-cloud\lh-shop-getway\target\classes started by user in C:\code\lh-shop-cloud)
+2024-06-05 18:02:05 [main] INFO  o.l.s.gateway.LhGatewayApplication - The following 1 profile is active: "dev"
+2024-06-05 18:02:05 [main] INFO  c.a.c.n.c.NacosConfigDataLoader - [Nacos Config] Load config[dataId=lh-shop-gateway.yml, group=DEFAULT_GROUP] success
+2024-06-05 18:02:05 [main] INFO  c.a.c.n.c.NacosConfigDataLoader - [Nacos Config] Load config[dataId=application-common.yml, group=DEFAULT_GROUP] success
+2024-06-05 18:02:05 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.lh.shop.gateway.LhGatewayApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class] cannot be opened because it does not exist
+2024-06-05 18:02:05 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.lh.shop.gateway.LhGatewayApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class] cannot be opened because it does not exist
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:612)
+	at org.springframework.context.annotation.ConfigurationClassParser.access$800(ConfigurationClassParser.java:110)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:815)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:812)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:783)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:192)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:756)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:572)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at org.lh.shop.gateway.LhGatewayApplication.main(LhGatewayApplication.java:14)
+Caused by: java.io.FileNotFoundException: class path resource [org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:203)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:55)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:699)
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1027)
+	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:385)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:331)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249)
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:602)
+	... 19 common frames omitted
+2024-06-05 18:02:05 [Thread-11] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2024-06-05 18:02:05 [Thread-5] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2024-06-05 18:02:05 [Thread-11] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2024-06-05 18:02:05 [Thread-5] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2024-06-05 18:03:44 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2024-06-05 18:03:44 [main] INFO  o.l.s.gateway.LhGatewayApplication - Starting LhGatewayApplication using Java 1.8.0_211 on LHZL-LTP-01 with PID 22308 (C:\code\lh-shop-cloud\lh-shop-getway\target\classes started by user in C:\code\lh-shop-cloud)
+2024-06-05 18:03:44 [main] INFO  o.l.s.gateway.LhGatewayApplication - The following 1 profile is active: "dev"
+2024-06-05 18:03:44 [main] INFO  c.a.c.n.c.NacosConfigDataLoader - [Nacos Config] Load config[dataId=lh-shop-gateway.yml, group=DEFAULT_GROUP] success
+2024-06-05 18:03:44 [main] INFO  c.a.c.n.c.NacosConfigDataLoader - [Nacos Config] Load config[dataId=application-common.yml, group=DEFAULT_GROUP] success
+2024-06-05 18:03:44 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.lh.shop.gateway.LhGatewayApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class] cannot be opened because it does not exist
+2024-06-05 18:03:44 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.lh.shop.gateway.LhGatewayApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class] cannot be opened because it does not exist
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:612)
+	at org.springframework.context.annotation.ConfigurationClassParser.access$800(ConfigurationClassParser.java:110)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:815)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:812)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:783)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:192)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:756)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:572)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at org.lh.shop.gateway.LhGatewayApplication.main(LhGatewayApplication.java:14)
+Caused by: java.io.FileNotFoundException: class path resource [org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:203)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:55)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:699)
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1027)
+	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:385)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:331)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249)
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:602)
+	... 19 common frames omitted
+2024-06-05 18:03:44 [Thread-5] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2024-06-05 18:03:44 [Thread-11] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2024-06-05 18:03:44 [Thread-11] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2024-06-05 18:03:44 [Thread-5] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2024-06-05 18:03:51 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2024-06-05 18:03:51 [main] INFO  o.l.s.gateway.LhGatewayApplication - Starting LhGatewayApplication using Java 1.8.0_211 on LHZL-LTP-01 with PID 26296 (C:\code\lh-shop-cloud\lh-shop-getway\target\classes started by user in C:\code\lh-shop-cloud)
+2024-06-05 18:03:51 [main] INFO  o.l.s.gateway.LhGatewayApplication - The following 1 profile is active: "dev"
+2024-06-05 18:03:51 [main] INFO  c.a.c.n.c.NacosConfigDataLoader - [Nacos Config] Load config[dataId=lh-shop-gateway.yml, group=DEFAULT_GROUP] success
+2024-06-05 18:03:51 [main] INFO  c.a.c.n.c.NacosConfigDataLoader - [Nacos Config] Load config[dataId=application-common.yml, group=DEFAULT_GROUP] success
+2024-06-05 18:03:52 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.lh.shop.gateway.LhGatewayApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class] cannot be opened because it does not exist
+2024-06-05 18:03:52 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.lh.shop.gateway.LhGatewayApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class] cannot be opened because it does not exist
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:612)
+	at org.springframework.context.annotation.ConfigurationClassParser.access$800(ConfigurationClassParser.java:110)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:815)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:812)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:783)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:192)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:756)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:572)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at org.lh.shop.gateway.LhGatewayApplication.main(LhGatewayApplication.java:14)
+Caused by: java.io.FileNotFoundException: class path resource [org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:203)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:55)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:699)
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1027)
+	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:385)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:331)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249)
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:602)
+	... 19 common frames omitted
+2024-06-05 18:03:52 [Thread-11] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2024-06-05 18:03:52 [Thread-11] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2024-06-05 18:03:52 [Thread-5] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2024-06-05 18:03:52 [Thread-5] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2024-06-05 18:07:08 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2024-06-05 18:07:08 [main] INFO  o.l.s.gateway.LhGatewayApplication - Starting LhGatewayApplication using Java 1.8.0_211 on LHZL-LTP-01 with PID 560 (C:\code\lh-shop-cloud\lh-shop-getway\target\classes started by user in C:\code\lh-shop-cloud)
+2024-06-05 18:07:08 [main] INFO  o.l.s.gateway.LhGatewayApplication - The following 1 profile is active: "dev"
+2024-06-05 18:07:08 [main] INFO  c.a.c.n.c.NacosConfigDataLoader - [Nacos Config] Load config[dataId=lh-shop-gateway.yml, group=DEFAULT_GROUP] success
+2024-06-05 18:07:08 [main] INFO  c.a.c.n.c.NacosConfigDataLoader - [Nacos Config] Load config[dataId=application-common.yml, group=DEFAULT_GROUP] success
+2024-06-05 18:07:09 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.lh.shop.gateway.LhGatewayApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class] cannot be opened because it does not exist
+2024-06-05 18:07:09 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.lh.shop.gateway.LhGatewayApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class] cannot be opened because it does not exist
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:612)
+	at org.springframework.context.annotation.ConfigurationClassParser.access$800(ConfigurationClassParser.java:110)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:815)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:812)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:783)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:192)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:756)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:572)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at org.lh.shop.gateway.LhGatewayApplication.main(LhGatewayApplication.java:14)
+Caused by: java.io.FileNotFoundException: class path resource [org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:203)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:55)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:699)
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1027)
+	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:385)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:331)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249)
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:602)
+	... 19 common frames omitted
+2024-06-05 18:07:09 [Thread-11] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2024-06-05 18:07:09 [Thread-5] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2024-06-05 18:07:09 [Thread-11] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2024-06-05 18:07:09 [Thread-5] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2024-06-05 18:13:21 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2024-06-05 18:13:21 [main] INFO  o.l.s.gateway.LhGatewayApplication - Starting LhGatewayApplication using Java 1.8.0_211 on LHZL-LTP-01 with PID 12016 (C:\code\lh-shop-cloud\lh-shop-getway\target\classes started by user in C:\code\lh-shop-cloud)
+2024-06-05 18:13:21 [main] INFO  o.l.s.gateway.LhGatewayApplication - The following 1 profile is active: "dev"
+2024-06-05 18:13:21 [main] INFO  c.a.c.n.c.NacosConfigDataLoader - [Nacos Config] Load config[dataId=lh-shop-gateway.yml, group=DEFAULT_GROUP] success
+2024-06-05 18:13:21 [main] INFO  c.a.c.n.c.NacosConfigDataLoader - [Nacos Config] Load config[dataId=application-common.yml, group=DEFAULT_GROUP] success
+2024-06-05 18:13:21 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.lh.shop.gateway.LhGatewayApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class] cannot be opened because it does not exist
+2024-06-05 18:13:21 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.lh.shop.gateway.LhGatewayApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class] cannot be opened because it does not exist
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:612)
+	at org.springframework.context.annotation.ConfigurationClassParser.access$800(ConfigurationClassParser.java:110)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:815)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:812)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:783)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:192)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:756)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:572)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at org.lh.shop.gateway.LhGatewayApplication.main(LhGatewayApplication.java:14)
+Caused by: java.io.FileNotFoundException: class path resource [org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:203)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:55)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:699)
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1027)
+	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:385)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:331)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249)
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:602)
+	... 19 common frames omitted
+2024-06-05 18:13:21 [Thread-11] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2024-06-05 18:13:21 [Thread-5] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2024-06-05 18:13:21 [Thread-11] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2024-06-05 18:13:21 [Thread-5] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2024-06-05 18:14:53 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2024-06-05 18:14:53 [main] INFO  o.l.s.gateway.LhGatewayApplication - Starting LhGatewayApplication using Java 1.8.0_211 on LHZL-LTP-01 with PID 26728 (C:\code\lh-shop-cloud\lh-shop-getway\target\classes started by user in C:\code\lh-shop-cloud)
+2024-06-05 18:14:53 [main] INFO  o.l.s.gateway.LhGatewayApplication - The following 1 profile is active: "dev"
+2024-06-05 18:14:53 [main] INFO  c.a.c.n.c.NacosConfigDataLoader - [Nacos Config] Load config[dataId=lh-shop-gateway.yml, group=DEFAULT_GROUP] success
+2024-06-05 18:14:53 [main] INFO  c.a.c.n.c.NacosConfigDataLoader - [Nacos Config] Load config[dataId=application-common.yml, group=DEFAULT_GROUP] success
+2024-06-05 18:14:53 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.lh.shop.gateway.LhGatewayApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class] cannot be opened because it does not exist
+2024-06-05 18:14:53 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.lh.shop.gateway.LhGatewayApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class] cannot be opened because it does not exist
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:612)
+	at org.springframework.context.annotation.ConfigurationClassParser.access$800(ConfigurationClassParser.java:110)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:815)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:812)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:783)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:192)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:756)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:572)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at org.lh.shop.gateway.LhGatewayApplication.main(LhGatewayApplication.java:14)
+Caused by: java.io.FileNotFoundException: class path resource [org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:203)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:55)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:699)
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1027)
+	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:385)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:331)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249)
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:602)
+	... 19 common frames omitted
+2024-06-05 18:14:53 [Thread-11] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2024-06-05 18:14:53 [Thread-5] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2024-06-05 18:14:53 [Thread-11] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2024-06-05 18:14:53 [Thread-5] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2024-06-05 18:23:06 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2024-06-05 18:23:06 [main] INFO  o.l.s.gateway.LhGatewayApplication - Starting LhGatewayApplication using Java 1.8.0_211 on LHZL-LTP-01 with PID 27272 (C:\code\lh-shop-cloud\lh-shop-getway\target\classes started by user in C:\code\lh-shop-cloud)
+2024-06-05 18:23:06 [main] INFO  o.l.s.gateway.LhGatewayApplication - The following 1 profile is active: "dev"
+2024-06-05 18:23:06 [main] INFO  c.a.c.n.c.NacosConfigDataLoader - [Nacos Config] Load config[dataId=lh-shop-gateway.yml, group=DEFAULT_GROUP] success
+2024-06-05 18:23:06 [main] INFO  c.a.c.n.c.NacosConfigDataLoader - [Nacos Config] Load config[dataId=application-common.yml, group=DEFAULT_GROUP] success
+2024-06-05 18:23:07 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.lh.shop.gateway.LhGatewayApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class] cannot be opened because it does not exist
+2024-06-05 18:23:07 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.lh.shop.gateway.LhGatewayApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class] cannot be opened because it does not exist
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:612)
+	at org.springframework.context.annotation.ConfigurationClassParser.access$800(ConfigurationClassParser.java:110)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:815)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:812)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:783)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:192)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:756)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:572)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at org.lh.shop.gateway.LhGatewayApplication.main(LhGatewayApplication.java:14)
+Caused by: java.io.FileNotFoundException: class path resource [org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:203)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:55)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:699)
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1027)
+	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:385)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:331)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249)
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:602)
+	... 19 common frames omitted
+2024-06-05 18:23:07 [Thread-11] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2024-06-05 18:23:07 [Thread-5] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2024-06-05 18:23:07 [Thread-11] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2024-06-05 18:23:07 [Thread-5] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2024-06-05 18:24:08 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2024-06-05 18:24:08 [main] INFO  o.l.s.gateway.LhGatewayApplication - Starting LhGatewayApplication using Java 1.8.0_211 on LHZL-LTP-01 with PID 16928 (C:\code\lh-shop-cloud\lh-shop-getway\target\classes started by user in C:\code\lh-shop-cloud)
+2024-06-05 18:24:08 [main] INFO  o.l.s.gateway.LhGatewayApplication - The following 1 profile is active: "dev"
+2024-06-05 18:24:08 [main] INFO  c.a.c.n.c.NacosConfigDataLoader - [Nacos Config] Load config[dataId=lh-shop-gateway.yml, group=DEFAULT_GROUP] success
+2024-06-05 18:24:08 [main] INFO  c.a.c.n.c.NacosConfigDataLoader - [Nacos Config] Load config[dataId=application-common.yml, group=DEFAULT_GROUP] success
+2024-06-05 18:24:08 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.lh.shop.gateway.LhGatewayApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class] cannot be opened because it does not exist
+2024-06-05 18:24:08 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.lh.shop.gateway.LhGatewayApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class] cannot be opened because it does not exist
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:612)
+	at org.springframework.context.annotation.ConfigurationClassParser.access$800(ConfigurationClassParser.java:110)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:815)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:812)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:783)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:192)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:756)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:572)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at org.lh.shop.gateway.LhGatewayApplication.main(LhGatewayApplication.java:14)
+Caused by: java.io.FileNotFoundException: class path resource [org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:203)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:55)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:699)
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1027)
+	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:385)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:331)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249)
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:602)
+	... 19 common frames omitted
+2024-06-05 18:24:08 [Thread-10] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2024-06-05 18:24:08 [Thread-5] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2024-06-05 18:24:08 [Thread-10] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2024-06-05 18:24:08 [Thread-5] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2024-06-05 18:24:36 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2024-06-05 18:24:36 [main] INFO  o.l.s.gateway.LhGatewayApplication - Starting LhGatewayApplication using Java 1.8.0_211 on LHZL-LTP-01 with PID 27972 (C:\code\lh-shop-cloud\lh-shop-getway\target\classes started by user in C:\code\lh-shop-cloud)
+2024-06-05 18:24:36 [main] INFO  o.l.s.gateway.LhGatewayApplication - The following 1 profile is active: "dev"
+2024-06-05 18:24:36 [main] INFO  c.a.c.n.c.NacosConfigDataLoader - [Nacos Config] Load config[dataId=lh-shop-gateway.yml, group=DEFAULT_GROUP] success
+2024-06-05 18:24:36 [main] INFO  c.a.c.n.c.NacosConfigDataLoader - [Nacos Config] Load config[dataId=application-common.yml, group=DEFAULT_GROUP] success
+2024-06-05 18:24:37 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.lh.shop.gateway.LhGatewayApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class] cannot be opened because it does not exist
+2024-06-05 18:24:37 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.lh.shop.gateway.LhGatewayApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class] cannot be opened because it does not exist
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:612)
+	at org.springframework.context.annotation.ConfigurationClassParser.access$800(ConfigurationClassParser.java:110)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:815)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:812)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:783)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:192)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:756)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:572)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at org.lh.shop.gateway.LhGatewayApplication.main(LhGatewayApplication.java:14)
+Caused by: java.io.FileNotFoundException: class path resource [org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:203)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:55)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:699)
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1027)
+	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:385)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:331)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249)
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:602)
+	... 19 common frames omitted
+2024-06-05 18:24:37 [Thread-10] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2024-06-05 18:24:37 [Thread-10] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2024-06-05 18:24:37 [Thread-5] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2024-06-05 18:24:37 [Thread-5] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end

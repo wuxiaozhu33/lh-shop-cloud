@@ -25,4 +25,9 @@ public class SysRoleServiceImpl extends ServiceImpl<SysRoleMapper, SysRole> impl
         List<SysRole> roles = baseMapper.selectRolesByUserId(userId);
         return roles.stream().map(SysRole::getRoleKey).collect(Collectors.toList());
     }
+
+    @Override
+    public List<SysRole> selectRolesByUserId(Long userId) {
+        return baseMapper.selectRolesByUserId(userId);
+    }
 }

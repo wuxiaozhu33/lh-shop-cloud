@@ -1,10 +1,6 @@
 package org.lh.shop.gateway.config;
 
-import org.lh.shop.gateway.handler.SentinelFallbackHandler;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.Ordered;
-import org.springframework.core.annotation.Order;
 
 /**
  * 网关限流配置
@@ -13,9 +9,9 @@ import org.springframework.core.annotation.Order;
  */
 @Configuration
 public class GatewayConfig {
-    @Bean
+    /*@Bean
     @Order(Ordered.HIGHEST_PRECEDENCE)
     public SentinelFallbackHandler sentinelGatewayExceptionHandler() {
         return new SentinelFallbackHandler();
-    }
+    }*/
 }

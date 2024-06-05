@@ -1,7 +1,6 @@
 package org.lh.shop.gateway.handler;
 
-import com.alibaba.csp.sentinel.adapter.gateway.sc.callback.GatewayCallbackManager;
-import com.alibaba.csp.sentinel.slots.block.BlockException;
+//import com.alibaba.csp.sentinel.adapter.gateway.sc.callback.GatewayCallbackManager;
 import org.lh.shop.gateway.utils.WebFluxUtils;
 import org.springframework.web.reactive.function.server.ServerResponse;
 import org.springframework.web.server.ServerWebExchange;
@@ -20,17 +19,19 @@ public class SentinelFallbackHandler implements WebExceptionHandler {
 
     @Override
     public Mono<Void> handle(ServerWebExchange exchange, Throwable ex) {
-        ex.printStackTrace();
+        /*ex.printStackTrace();
         if (exchange.getResponse().isCommitted()) {
             return Mono.error(ex);
         }
         if (!BlockException.isBlockException(ex)) {
             return Mono.error(ex);
         }
-        return handleBlockedRequest(exchange, ex).flatMap(response -> writeResponse(response, exchange));
+        return handleBlockedRequest(exchange, ex).flatMap(response -> writeResponse(response, exchange));*/
+        return null;
     }
 
     private Mono<ServerResponse> handleBlockedRequest(ServerWebExchange exchange, Throwable throwable) {
-        return GatewayCallbackManager.getBlockHandler().handleRequest(exchange, throwable);
+//        return GatewayCallbackManager.getBlockHandler().handleRequest(exchange, throwable);
+        return null;
     }
 }
