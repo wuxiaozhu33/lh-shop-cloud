@@ -12,7 +12,7 @@ import java.util.List;
  * @author wuYf
  * @date 2024/6/3 11:20
  */
-public class PermissionInterface  implements StpInterface {
+public class PermissionInterface implements StpInterface {
 
 
     @Override

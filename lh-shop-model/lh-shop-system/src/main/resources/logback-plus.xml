@@ -20,7 +20,9 @@
 
     <!-- 开启 skywalking 日志收集 -->
     <include resource="logback-skylog.xml" />
-
+    <logger name="com.dongxiguo.sa">
+        <level value="DEBUG" />
+    </logger>
 	<!--系统操作日志-->
     <root level="info">
         <appender-ref ref="console" />

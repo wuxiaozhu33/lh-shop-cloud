@@ -1,1 +1,2 @@
 org.lh.shop.mybatis.config.MybatisPlusConfig
+org.lh.shop.mybatis.config.MyBatisPrintConfig

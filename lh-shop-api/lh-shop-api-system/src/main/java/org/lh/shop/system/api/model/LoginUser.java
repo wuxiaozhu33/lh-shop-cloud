@@ -1,6 +1,5 @@
 package org.lh.shop.system.api.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.lh.shop.common.core.constant.CacheConstants;
@@ -92,7 +91,6 @@ public class LoginUser implements Serializable {
     /**
      * 密码
      */
-    @JsonIgnore
     private String password;
 
     /**

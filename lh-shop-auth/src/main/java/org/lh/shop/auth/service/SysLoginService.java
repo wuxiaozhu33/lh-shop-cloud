@@ -1,34 +1,21 @@
 package org.lh.shop.auth.service;
 
-import cn.dev33.satoken.exception.NotLoginException;
 import cn.dev33.satoken.secure.BCrypt;
 import cn.dev33.satoken.stp.StpUtil;
 import cn.hutool.core.util.ObjectUtil;
-import cn.hutool.http.useragent.UserAgent;
-import cn.hutool.http.useragent.UserAgentUtil;
 import org.lh.shop.auth.properties.UserPasswordProperties;
 import org.lh.shop.common.core.constant.CacheConstants;
 import org.lh.shop.common.core.constant.Constants;
 import org.lh.shop.common.core.enums.DeviceType;
 import org.lh.shop.common.core.enums.LoginType;
-import org.lh.shop.common.core.enums.UserType;
-import org.lh.shop.common.core.exception.user.CaptchaExpireException;
 import org.lh.shop.common.core.exception.user.UserException;
-import org.lh.shop.common.core.utils.MessageUtils;
-import org.lh.shop.common.core.utils.ServletUtils;
-import org.lh.shop.common.core.utils.SpringUtils;
-import org.lh.shop.common.core.utils.ip.AddressUtils;
 import org.lh.shop.common.redis.utils.RedisUtils;
 import org.lh.shop.common.satoken.utils.LoginHelper;
 import org.lh.shop.system.api.RemoteUserService;
-import org.lh.shop.system.api.domain.SysUser;
 import org.lh.shop.system.api.model.LoginUser;
-import org.lh.shop.system.api.model.XcxLoginUser;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
 import java.time.Duration;
 import java.util.function.Supplier;
 
@@ -39,7 +26,7 @@ import java.util.function.Supplier;
  */
 @Service
 public class SysLoginService {
-
+    @Resource
     private RemoteUserService remoteUserService;
 
     @Resource

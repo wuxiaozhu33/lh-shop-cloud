@@ -11,15 +11,15 @@ import java.util.Collections;
  */
 public class CodeGenerator {
     public static void main(String[] args) {
-        String url = "jdbc:mysql://121.37.24.51:3346/lh-shop?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true";
+        String url = "jdbc:mysql://121.37.24.51:3346/yami_shops?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true";
         String username = "root";
         String password = "pwd123";
-        String tableName = "sys_dept";
-        String tablePrefix = "t_";
-        String modelName = "sys";
+        String tableName = "tz_order";
+        String tablePrefix = "tz_";
+        String modelName = "order";
         String entityPackageName = "domain";
 //        String projectPath = System.getProperty("user.dir");
-        String projectPath = "C:/code/lh-shop-cloud/lh-shop-model/lh-shop-system";
+        String projectPath = "C:/code/lh-shop-cloud/lh-shop-model/lh-shop-order";
         String outputPath = projectPath + "/src/main/java";
         String xmlPath = projectPath + "/src/main/resources/mapper/" ;
         FastAutoGenerator.create(url, username, password)

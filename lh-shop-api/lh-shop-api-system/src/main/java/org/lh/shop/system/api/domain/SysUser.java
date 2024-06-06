@@ -6,9 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import org.lh.shop.common.core.annotation.Sensitive;
 import org.lh.shop.common.core.constant.UserConstants;
-import org.lh.shop.common.core.enums.SensitiveStrategy;
 import org.lh.shop.common.core.web.domain.BaseEntity;
 import org.lh.shop.common.core.xss.Xss;
 
@@ -65,7 +63,7 @@ public class SysUser extends BaseEntity {
     /**
      * 用户邮箱
      */
-    @Sensitive(strategy = SensitiveStrategy.EMAIL)
+//    @Sensitive(strategy = SensitiveStrategy.EMAIL)
     @Email(message = "邮箱格式不正确")
     @Size(min = 0, max = 50, message = "邮箱长度不能超过50个字符")
     private String email;
@@ -73,8 +71,8 @@ public class SysUser extends BaseEntity {
     /**
      * 手机号码
      */
-    @Sensitive(strategy = SensitiveStrategy.PHONE)
-    private String phonenumber;
+//    @Sensitive(strategy = SensitiveStrategy.PHONE)
+    private String phoneNum;
 
     /**
      * 用户性别

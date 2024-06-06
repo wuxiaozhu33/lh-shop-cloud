@@ -41,7 +41,7 @@ public class GlobalExceptionHandler {
     public R<Void> handleNotPermissionException(NotPermissionException e, HttpServletRequest request) {
         String requestUri = request.getRequestURI();
         log.error("请求地址'{}',权限码校验失败'{}'", requestUri, e.getMessage());
-        return R.fail(HttpStatus.FORBIDDEN, "没有访问权限，请联系管理员授权");
+        return R.fail(HttpStatus.FORBIDDEN, e.getMessage());
     }
 
     /**
@@ -51,7 +51,7 @@ public class GlobalExceptionHandler {
     public R<Void> handleNotRoleException(NotRoleException e, HttpServletRequest request) {
         String requestUri = request.getRequestURI();
         log.error("请求地址'{}',角色权限校验失败'{}'", requestUri, e.getMessage());
-        return R.fail(HttpStatus.FORBIDDEN, "没有访问权限，请联系管理员授权");
+        return R.fail(HttpStatus.FORBIDDEN, e.getMessage());
     }
 
     /**
@@ -61,7 +61,7 @@ public class GlobalExceptionHandler {
     public R<Void> handleNotLoginException(NotLoginException e, HttpServletRequest request) {
         String requestUri = request.getRequestURI();
         log.error("请求地址'{}',认证失败'{}',无法访问系统资源", requestUri, e.getMessage());
-        return R.fail(HttpStatus.UNAUTHORIZED, "认证失败，无法访问系统资源");
+        return R.fail(HttpStatus.UNAUTHORIZED, e.getMessage());
     }
 
     /**
@@ -71,7 +71,7 @@ public class GlobalExceptionHandler {
     public R<Void> handleSameTokenInvalidException(SameTokenInvalidException e, HttpServletRequest request) {
         String requestUri = request.getRequestURI();
         log.error("请求地址'{}',内网认证失败'{}',无法访问系统资源", requestUri, e.getMessage());
-        return R.fail(HttpStatus.UNAUTHORIZED, "认证失败，无法访问系统资源");
+        return R.fail(HttpStatus.UNAUTHORIZED, e.getMessage());
     }
 
     /**

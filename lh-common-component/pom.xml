@@ -19,6 +19,7 @@
         <module>lh-common-bom</module>
         <module>lh-common-mybatis</module>
         <module>lh-common-security</module>
+        <module>lh-common-openfeign</module>
     </modules>
 
 

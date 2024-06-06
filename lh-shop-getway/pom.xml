@@ -180,14 +180,15 @@
             <artifactId>lh-common-satoken</artifactId>
             <exclusions>
                 <exclusion>
-                    <artifactId>spring-boot-starter-web</artifactId>
-                    <groupId>org.springframework.boot</groupId>
-                </exclusion>
-                <exclusion>
                     <artifactId>sa-token-spring-boot-starter</artifactId>
                     <groupId>cn.dev33</groupId>
                 </exclusion>
             </exclusions>
+
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
         </dependency>
 
 

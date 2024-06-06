@@ -1,10 +1,7 @@
 package org.lh.shop.auth.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.lh.shop.auth.form.EmailLoginBody;
 import org.lh.shop.auth.form.LoginBody;
-import org.lh.shop.auth.form.RegisterBody;
-import org.lh.shop.auth.form.SmsLoginBody;
 import org.lh.shop.auth.service.SysLoginService;
 import org.lh.shop.common.core.constant.Constants;
 import org.lh.shop.common.core.domin.R;
@@ -14,12 +11,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.validation.constraints.NotBlank;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * token 控制
+ * 登录token管理
  *
  * @author Lion Li
  */

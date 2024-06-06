@@ -24,6 +24,12 @@
             </dependency>
             <dependency>
                 <groupId>org.lh.shop</groupId>
+                <artifactId>lh-common-openfeign</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.lh.shop</groupId>
                 <artifactId>lh-common-redis</artifactId>
                 <version>${project.version}</version>
             </dependency>

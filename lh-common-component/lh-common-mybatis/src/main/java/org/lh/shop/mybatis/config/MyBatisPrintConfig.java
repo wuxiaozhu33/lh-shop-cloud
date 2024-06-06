@@ -2,7 +2,7 @@ package org.lh.shop.mybatis.config;
 
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.lh.shop.mybatis.inteceptor.MyBatisPrintInterceptor;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.boot.autoconfigure.AutoConfiguration;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
@@ -13,7 +13,7 @@ import java.util.List;
  * @date 2024/6/3 14:21
  * @description mybatis自定义配置
  */
-@Configuration
+@AutoConfiguration
 public class MyBatisPrintConfig {
     @Resource
     private List<SqlSessionFactory> sqlSessionFactoryList;
