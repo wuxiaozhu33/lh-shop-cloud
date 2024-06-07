@@ -1,5 +1,6 @@
 package org.lh.shop.order.api.controller;
 
+import org.lh.shop.common.core.domin.R;
 import org.lh.shop.order.domain.Order;
 import org.lh.shop.order.service.IOrderService;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,12 +15,14 @@ import java.util.List;
  * @date 2024/6/4 11:21
  */
 @RestController
-@RequestMapping("/remote/sys")
+@RequestMapping("/remote/order")
 public class RemoteController {
     @Resource
     private IOrderService orderService;
+
+//    @SaCheckRole(value = {"admin"})
     @GetMapping("/getOrders")
-    public List<Order> getUserInfo() {
-        return orderService.getOrders();
+    public R<List<Order>> getUserInfo() {
+        return R.ok(orderService.getOrders());
     }
 }

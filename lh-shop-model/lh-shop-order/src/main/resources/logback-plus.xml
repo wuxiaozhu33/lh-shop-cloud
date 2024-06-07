@@ -13,16 +13,18 @@
             <charset>utf-8</charset>
         </encoder>
     </appender>
-<!--
+
     <include resource="logback-common.xml" />
 
     <include resource="logback-logstash.xml" />
 
-    &lt;!&ndash; 开启 skywalking 日志收集 &ndash;&gt;
-    <include resource="logback-skylog.xml" />-->
+    <!-- 开启 skywalking 日志收集 -->
+    <include resource="logback-skylog.xml" />
+    <logger name="com.dongxiguo.sa">
+        <level value="DEBUG" />
+    </logger>
 	<!--系统操作日志-->
     <root level="info">
         <appender-ref ref="console" />
     </root>
-    <logger name="feign.Logger" level="FULL"/>
 </configuration>

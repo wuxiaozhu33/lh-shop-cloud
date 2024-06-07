@@ -1,7 +1,6 @@
 package org.lh.shop.common.feign.config;
 
 import cn.hutool.core.date.DatePattern;
-import com.alibaba.fastjson.JSON;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.json.JsonMapper;
@@ -9,14 +8,7 @@ import com.fasterxml.jackson.databind.type.TypeFactory;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
-import feign.Util;
-import feign.codec.DecodeException;
-import feign.codec.Decoder;
-import org.lh.shop.common.core.constant.Constants;
-import org.lh.shop.common.core.domin.R;
-import org.lh.shop.common.core.exception.ServiceException;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.context.annotation.Bean;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
@@ -31,7 +23,7 @@ import java.time.format.DateTimeFormatter;
  */
 @AutoConfiguration
 public class FeignConfiguration {
-
+    /*
     @Bean
     public Decoder feignDecoder() {
         return (response, type) -> {
@@ -51,7 +43,7 @@ public class FeignConfiguration {
                 return json2obj(bodyStr, type);
             }
         };
-    }
+    }*/
 
     private static <T> T json2obj(String jsonStr, Type targetType) {
         try {

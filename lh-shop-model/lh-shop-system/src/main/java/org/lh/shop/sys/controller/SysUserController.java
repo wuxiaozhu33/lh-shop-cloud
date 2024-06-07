@@ -6,6 +6,8 @@ import org.lh.shop.common.core.domin.R;
 import org.lh.shop.mybatis.page.PageQuery;
 import org.lh.shop.sys.dto.SysUserDto;
 import org.lh.shop.sys.service.ISysUserService;
+import org.lh.shop.system.api.RemoteOrderService;
+import org.lh.shop.system.api.domain.OrderVo;
 import org.lh.shop.system.api.domain.SysUser;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,6 +26,9 @@ import java.util.List;
 public class SysUserController {
 
     @Resource
+    private RemoteOrderService remoteOrderService;
+
+    @Resource
     private ISysUserService sysUserService;
 
     @GetMapping("/page")
@@ -35,5 +40,10 @@ public class SysUserController {
     @GetMapping("/list")
     public R<List<SysUser>> listUser(SysUserDto userDto) {
         return R.ok(sysUserService.listUser(userDto));
+    }
+
+    @GetMapping("/getOrders")
+    public R<List<OrderVo>> getOrders() {
+        return R.ok(remoteOrderService.getOrders());
     }
 }

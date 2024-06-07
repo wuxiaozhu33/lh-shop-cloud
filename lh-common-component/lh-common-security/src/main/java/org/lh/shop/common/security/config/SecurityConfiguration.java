@@ -35,7 +35,7 @@ public class SecurityConfiguration implements WebMvcConfigurer {
     public SaServletFilter getSaServletFilter() {
         return new SaServletFilter()
             .addInclude("/**")
-            .addExclude("/actuator/**")
+            .addExclude("/remote/sys/getUserInfo")
             .setAuth(obj -> {
                 if (SaManager.getConfig().getCheckSameToken()) {
                     SaSameUtil.checkCurrentRequestToken();
