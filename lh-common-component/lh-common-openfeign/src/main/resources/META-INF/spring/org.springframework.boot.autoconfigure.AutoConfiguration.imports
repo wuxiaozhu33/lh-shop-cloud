@@ -1,1 +1,2 @@
 org.lh.shop.common.feign.config.FeignConfiguration
+org.lh.shop.common.feign.config.FeignInterceptor

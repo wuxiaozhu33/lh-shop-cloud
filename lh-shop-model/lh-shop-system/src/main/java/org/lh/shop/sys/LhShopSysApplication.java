@@ -12,7 +12,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableFeignClients
+@EnableFeignClients(basePackages = {"org.lh.shop.system.api"})
 public class LhShopSysApplication {
     public static void main(String[] args) {
         SpringApplication.run(LhShopSysApplication.class, args);

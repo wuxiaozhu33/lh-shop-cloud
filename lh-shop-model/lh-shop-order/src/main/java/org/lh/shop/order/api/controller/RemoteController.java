@@ -1,5 +1,6 @@
 package org.lh.shop.order.api.controller;
 
+import cn.dev33.satoken.annotation.SaCheckRole;
 import org.lh.shop.common.core.domin.R;
 import org.lh.shop.order.domain.Order;
 import org.lh.shop.order.service.IOrderService;
@@ -20,7 +21,7 @@ public class RemoteController {
     @Resource
     private IOrderService orderService;
 
-//    @SaCheckRole(value = {"admin"})
+    @SaCheckRole(value = {"admin"})
     @GetMapping("/getOrders")
     public R<List<Order>> getUserInfo() {
         return R.ok(orderService.getOrders());
