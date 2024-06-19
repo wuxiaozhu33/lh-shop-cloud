@@ -496,6 +496,7 @@ public class RedisUtils {
             log.debug("query data from redis ....... ");
             T caCherVal = RedisUtils.getCacheObject(key);
             if (caCherVal == null) {
+                log.debug("query data from database ....... ");
                 T databaseValue = databaseSelector.get();
                 if (databaseValue != null) {
                     RedisUtils.setCacheObject(key, databaseValue);
